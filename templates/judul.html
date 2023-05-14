@@ -1,0 +1,17 @@
+<div class="text-center text-dark shadow-lg" style="background-color: #0A4D68; height: 200px;">
+  <br>
+  <h1 style="color: bisque;">SISTA POLBAN</h1>
+  {% if user.is_authenticated %}
+    <p style="color: bisque;">halo, <strong>{{ user }}</strong>! selamat datang di web program studi teknik telekomunikasi politeknik negeri bandung</p>
+  
+    <nav class="nav justify-content-center">
+      <a href="{% url 'home' %}" class="nav-link text-white">Home</a>
+      <a href="{% url 'keygen' %}" class="nav-link text-white">KeyGen</a>
+      <a href="{% url 'buku' %}" class="nav-link text-white">Buku</a>
+      <a href="{% url 'dekripsi' %}" class="nav-link text-white">Dekripsi File</a>
+      <a href="{% url 'users' %}" class="nav-link text-white">User</a>
+      <a href="{% url 'keluar' %}" class="nav-link text-white">Keluar</a>
+    </nav>
+  {% endif %}
+
+</div>
