@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  
+<div class="container" style="background-color: rgb(252, 252, 252); height: 500px;" >
+  <div class="row">
+    <div class="col-md-12">
+      
+      {% for message in messages %}
+        {% if message %}
+          <div class="alert alert-success">{{ message }}</div>
+        {% endif %}
+      {% endfor %}
+
+      <table class="table-bordered table-striped" style="margin-left: 20px;">
+        <thead>
+          <tr style="text-align: center;">
+            <th>PENULIS</th>
+            <th>KETERANGAN</th>
+            <th>HASIL ENKRIPSI</th>
+            <th>HASIL DEKRIPSI</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for buku in books %}
+          <tr>
+            <td>{{ buku.penulis }}</td>
+            <td>{{ buku.dokumen }}</td>
+            <td>{{ buku.proses }}</td>
+            <td>{{ buku.proses }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
